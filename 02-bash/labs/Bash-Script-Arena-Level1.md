@@ -1,18 +1,18 @@
-**The Game: Bash Battle Arena**
+# Lab: Bash Battle Arena — Level 1: The Basics
 
-Level 1: The basics
+## Objective
+Create a directory named `Arena`, and inside it create three files: `warrior.txt`, `mage.txt`, and `archer.txt`. List the contents of the `Arena` directory.
 
-**Mission**: Create a directory named Arena and then inside it, create
-three files: warrior.txt, mage.txt, and archer.txt. List the contents of
-the Arena directory.
+## Commands Used
+```bash
+mkdir arena
+cd arena
+touch warrior.txt mage.txt archer.txt
+ls arena
+```
 
-**Solutions:**
+## Output
+The `arena` directory is created. Within this directory it contains three empty files, and its contents are listed.
 
-1.  **mkdir arena ( creates the directory arena)**
-
-2.  **cd arena (change to the directory arena)**
-
-3.  **touch warrior.txt mage.txt archer.txt (touch command creates the
-    empty files)**
-
-4.  **ls arena (lists the contents within the directory arena)**
+## Challenges
+None
