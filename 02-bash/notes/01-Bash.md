@@ -2,55 +2,28 @@
 
 ## Key Concepts
 
-- Bash is a command line tool to interact with your computer.
+- Bash is a command line tool used to interact with your computer.
 - Bash scripting is a file containing a series of commands you want the computer to execute automatically.
-- Why Learn it?
-  - Automate tasks -- saves time on repetitive actions
-  - Manage Systems -- Handle files, software installs and system configuration
-  - Boost Efficiency -- Less typing hence more work gets done
-- Bash Scripting allows you to manipulate files, process data and automate backups and perform complex operations.
-- The Shebang Line:
-  - Common Names -- Shebang, a Hash bang or the interpreted directive.
-  - Plays a crucial role in the bash script
-  - It is the first line you find in any bash script. #!/bin/bash is at the top and is the shebang line
-  - It serves as a directive on how the operating system should interpret the script. (the system interprets it using binary/bash)
-  - The path after the exclamation mark is essentially pointing to the specific interpreter or shell that should handle the script.
-  - Shebang line allows you to specify the different interpreters or different types of scripts.
-  - Example #!/user/bin/python2 . This instructs the operating system to interpret the script using the python interpreter.
-  - You can use sh greet.sh or bash greet.sh to run this bash script. If the interpreter within the bash script hasn't been specified, the commands sh and bash are used to tell the operating system to interpret it using bash.
-  - To Summarize, the shebang line starts with #! and specifies the interpreter or shell that handles the script. It enables consistent executional scripts across different environments regardless of what shell you're using.
-- Comments:
-  - Comments are lines in a script that are not executed as part of the code, instead they form as informative text for us reading the script.
-  - Adding comments to your scripts are considered a best practice as it gives you and others purpose, functionality and logic of the script.
-  - There are two types of comments in bash: Single line comment and multi-line comment
-  - # Prints greeting to the console is an example of a single line comment.
-  - Single line comments begin with a # (hash symbol)
-  - This is a multi-line comment. It starts with: ' and ends in '.
-  - Running ./greet.sh will only show Hello World. The comments are not shown as they are not executable. When using cat greet.sh, the comments are shown as it shows the contents of the file.
-  - Lines 4-6 were commands but have been temporarily made into comments by adding a Hash in front of command.
-  - Comments are useful for temporarily disabling commands.
-  - If you run the script ./greet.sh, it will not run as all the commands have been commented.
-- Running Scripts from Anywhere:
-  - ./ sh bash are three common ways used to run scripts from its current directory
-  - To run the script from anywhere without specifying its path, is to place the script in one of the directories within its path environmental variable.
-  - The PATH is an environmental variable that tells the shell which directories to search for executable files in response to commands
-  - There are several directories separated by colons. This represents the path environmental variable.
-  - Any executable file placed in one of these directories can be executed anywhere within the terminal without specifying the path
-  - Sudo mv greet.sh /usr/local/bin/greet moves the executable file into the Path enviornmental directory whilst changing the file name to greet.
-  - If you type in greet from any directory within the terminal, Hello World is printed out
+- Reasons to learn it: automate repetitive tasks, manage systems (files, installs, configuration), and boost efficiency (less typing, more done).
+- The **shebang line** (also called a hashbang or interpreter directive) is the first line of a script (e.g. `#!/bin/bash`). It tells the operating system which interpreter/shell should run the script.
+- **Comments** are lines that aren't executed — they're informative text for us reading the script. There are single-line comments (`#`) and multi-line comments (`: ' ... '`).
+- Comments are useful for functionality, logical purposes of the script and for temporarily disabling commands.
+- Scripts can be run from anywhere (without typing the full path) if they're placed in a directory listed in the `PATH` environment variable.
 
 ## Commands
 
-- `touch my-first-script.sh` -- Creates the bash script my-first-script. The .sh at the end makes sure it's a bash script.
-- `chmod +x my-first-script.sh` -- Scripts are executables, so this makes it executable
-- `./my-first-script.sh` -- runs the script and prints Hello World!
-- `sh greet.sh` / `bash greet.sh` -- used to run this bash script if the interpreter within the bash script hasn't been specified
-- `echo $PATH` -- shows the path environmental variable
-- `sudo mv greet.sh /usr/local/bin/greet` -- moves the executable file into the Path enviornmental directory whilst changing the file name to greet
+- `touch script.sh` - creates an empty file
+- `vim script.sh` / `vi script.sh` - opens the file in the vim editor to write the script
+- `chmod +x script.sh` - makes the script executable
+- `./script.sh` - runs the script from the current directory
+- `sh script.sh` - runs the script using the `sh` interpreter
+- `bash script.sh` - runs the script using the `bash` interpreter
+- `echo $PATH` - prints the list of directories bash searches for executables
+- `sudo mv script.sh /usr/local/bin/newname` - moves a script into a PATH directory and changes the name so it can be run from anywhere in the terminal by typing its new name
 
 ## Examples
 
-In vim mode, I typed in this at the top #!/bin/bash and 2 lines below echo "Hello World!":
+Creating and running your first script:
 ```
 root@ubuntu:~$ touch my-first-script.sh
 root@ubuntu:~$ vim my-first-script.sh
@@ -66,7 +39,7 @@ Hello World!
 root@ubuntu:~$
 ```
 
-Running the script with sh or bash:
+Running a script explicitly with `sh` or `bash`:
 ```
 ~$ sh greet.sh
 Hello World
@@ -74,7 +47,7 @@ Hello World
 Hello World
 ```
 
-Single line comment example (# Prints greeting to the console) and multi-line comment (starts with : ' and ends in '):
+Single-line and multi-line comments:
 ```bash
 #!/bin/bash
 
@@ -86,7 +59,7 @@ This is a multi-line comment
 '
 ```
 
-Lines 4-6 were commands but have been temporarily made into comments by adding a Hash in front of command:
+Using comments to temporarily disable commands:
 ```bash
 #!/bin/bash
 
@@ -98,12 +71,12 @@ Lines 4-6 were commands but have been temporarily made into comments by adding a
 : '
 Explanation:
 - Looping through all .txt files in the current directory
-- use 'mv' command to rename each .txt file to .bak
+- use "mv" command to rename each .txt file to .bak
 - The $(file%.txt).bak is the syntax that removes the .txt extension and appends .bak
 '
 ```
 
-There are several directories separated by colons. This represents the path environmental variable:
+Checking the PATH environment variable:
 ```
 ~$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/myapp
@@ -111,4 +84,4 @@ There are several directories separated by colons. This represents the path envi
 
 ## What I Learned
 
-To Summarize, the shebang line starts with #! and specifies the interpreter or shell that handles the script. It enables consistent executional scripts across different environments regardless of what shell you're using. Comments are useful for temporarily disabling commands, and give you and others purpose, functionality and logic of the script. Any executable file placed in one of the directories within the PATH environmental variable can be executed anywhere within the terminal without specifying the path.
+Bash scripting enables reptitive tasks to be automated. This boosts effiency and perform complex operations. The shebang line plays a crucial role by telling the Operating System on how to interpret the script. Comments are useful for documenting the script for the user to understand each set of tasks. They are useful for temporarily disabling commands. The PATH is an environmental variable that tells the shell which directories to search for executable files in response to commands. Placing a script into the PATH environmental directory enables the script to be executed from anywhere without specifying the path.
