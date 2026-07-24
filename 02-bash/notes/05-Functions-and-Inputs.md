@@ -221,7 +221,7 @@ echo "Sanitized username: $sanitized_username"
     - Functions can be called using the function name.
     - Parameters are used to make functions flexibile and reusable.
     - Positional parameters allow us to pass data into functions and access them using numbered variables like $1 and $2.
-    - Special parameters provide additional information about the script and arguments passed to it. Examples: $#, $@, $0. (Known as special parameters).
+    - Special parameters provide additional information about the script and arguments passed to it. Examples: '$#', '$@', '$0'. (Known as special parameters).
     - In bash, conditional statements can be used to validate user inputs ensuring they meet the desired criteria.
     - Exit codes can be leveraged to determine the success or failure of input validation.
     - Input sanitization such as parameter expansion with pattern substitution can help clean and transform user inputs to meet the required formats or constraints.
