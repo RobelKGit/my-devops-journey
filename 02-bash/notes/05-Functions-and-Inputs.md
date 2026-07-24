@@ -13,7 +13,7 @@
   - Function parameters allow us to pass data to functions enabling them to perform specific tasks based on provided inputs.
   - Two types of parameters; positional parameter and special parameter.
   - Bash provides a set of special parameters that can be accessed within functions
-  - Number of arguments: ($#) - $# holds the count of arguments (the number of arguments)
+  - Number of arguments: '$#' - '$#' holds the count of arguments (the number of arguments)
   - Script name: $0 - $0 is the special variable containing the name of the script.
   - First argument: $1 -- prints the first argument
   - Second argument $2 -- prints the second argument
