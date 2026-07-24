@@ -202,4 +202,4 @@ Count: 5
 
 ## What I Learned
 
-While loops are best when you don't know in advance how many iterations you'll need (e.g. waiting for a condition to change), while for loops are best when iterating over a known sequence, list, or array. `break` and `continue` add fine-grained control inside either loop type — `break` gets you out entirely, while `continue` just skips the current pass. Seeing the same "skip/stop at 3" logic implemented with both `break` and `continue` back to back made the difference between them click: `break` produces a shorter output (loop ends early), while `continue` still completes all iterations but skips printing on the matched one.
+While loops are best when you don't know in advance how many iterations you'll need (e.g. waiting for a condition to change), while for loops are best when iterating over a known sequence, list, or array. `break` and `continue` allow additional control within both for and while loops. `break` interupts the innermost loop its placed in, regardless of its condition. `continue` skips the rest of the current iteration it is placed in and moves onto the next iteration.
