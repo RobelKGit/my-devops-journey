@@ -1,36 +1,17 @@
-# Labs
+# Lab
 
-Document your completed labs here.
+Core Assignment – Domain + EC2 + DNS
 
-## Template
+## Topics involved
 
-When documenting a lab, include:
-
-```markdown
-# Lab: [Lab Name]
+This Assignment combines the principal concepts of networking; IPs, firewalls, routing, DNS, ports and cloud hosting
 
 ## Objective
 
-What was the goal?
-
-## Commands Used
-
-(the commands you ran)
-
-## Output
-
-(what happened)
-
-## Challenges
-
-Any issues you hit and how you solved them.
-
-## What I Learned
-
-Key takeaways from this lab.
-```
-
-## Completed Labs
-
-- [ ] Add your first lab
-
+Required steps include the following:
+1.	Buy and configure a domain.
+2.	Deploy an EC2 instance.
+3.	Security group must allow HTTP (port 80).
+4.	Install and run NGINX.
+5.	Create an A Record and map it to your EC2 public IPv4 Address.
+6.	View your domain page and ensure the NGINX landing page is displayed. 
