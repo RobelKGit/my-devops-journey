@@ -2,7 +2,7 @@
 
 Version control is a non-negotiable skill. Every company uses Git.
 
-## What You'll Learn
+## Topics Learnt
 
 - Repository basics (init, clone)
 - Staging and committing
@@ -12,23 +12,8 @@ Version control is a non-negotiable skill. Every company uses Git.
 - Git workflows (GitFlow, trunk-based)
 - Collaboration with PRs
 
-## Folder Structure
 
-```
-03-git/
-├── notes/       # Your notes from lessons
-├── labs/        # Completed lab exercises
-└── projects/    # Hands-on projects
-```
-
-## Suggested Projects
-
-- [ ] Create a repo with a proper branching strategy
-- [ ] Simulate and resolve merge conflicts
-- [ ] Set up branch protection rules
-- [ ] Create a PR template
-
-## Key Commands
+## Key Commands Noted
 
 ```bash
 git status          # Check current state
@@ -40,8 +25,3 @@ git branch          # List branches
 git checkout -b     # Create and switch branch
 git merge           # Merge branches
 ```
-
-## Resources
-
-- [Git Documentation](https://git-scm.com/doc)
-- [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
